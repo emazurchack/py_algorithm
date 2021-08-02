@@ -25,9 +25,9 @@ print(f'Companies AVG profit least then {nAVGForAll}: ', [dCompanyData[i]['name'
 print('Задание № 02')
 class Hex(object):
     def __init__(self, item):
-        self.item = item
+        self.item = hex(int(item, 16))
     def __str__(self):
-        return f'{self.item}'
+        return f'{str(self.item).upper()}'
     def __add__(self, other):
         return Hex(hex(int(self.item, 16) + int(other.item, 16)))
     def __sub__(self, other):

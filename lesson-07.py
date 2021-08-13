@@ -119,7 +119,7 @@ def quick_select_median(l, pivot_fn=choice):
         return 0.5 * (quick_select(l, len(l) / 2 - 1, pivot_fn) + quick_select(l, len(l) / 2, pivot_fn))
 
 length = int(input('Введите размер тестовой выборки: '))
-lstTest = [randint(-100, 100) for _ in range(length)]
+lstTest = [randint(-100, 100) for _ in range(2*length+1)]
 print(f'length: {len(lstTest)} list:', lstTest)
 print('Median:', quick_select_median(lstTest))
 lstTest.sort()

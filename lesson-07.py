@@ -15,7 +15,7 @@ print('Задание № 01')
 def bubbleSort(array_to_sort):
     for i in range(len(array_to_sort)):
         for j in range(0, len(array_to_sort) - i - 1):
-            if array_to_sort[j] > array_to_sort[j + 1]:
+            if array_to_sort[j] < array_to_sort[j + 1]:
                 array_to_sort[j], array_to_sort[j + 1] = array_to_sort[j + 1], array_to_sort[j]
 
 a = [randint(-100, 100) for _ in range(30)]
@@ -28,7 +28,7 @@ def bubbleSortMod(array_to_sort):
 	while changed:
 		changed = False
 		for i in range(len(array_to_sort) - 1):
-			if array_to_sort[i] > array_to_sort[i+1]:
+			if array_to_sort[i] < array_to_sort[i+1]:
 				array_to_sort[i], array_to_sort[i+1] = array_to_sort[i+1], array_to_sort[i]
 				changed = True
 
